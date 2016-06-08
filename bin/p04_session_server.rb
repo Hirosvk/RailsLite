@@ -11,6 +11,7 @@ end
 
 app = Proc.new do |env|
   req = Rack::Request.new(env)
+  p JSON.parse(req.cookies['_rails_lite_app'])["count"]
   res = Rack::Response.new
   MyController.new(req, res).go
   res.finish

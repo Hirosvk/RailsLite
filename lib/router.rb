@@ -63,7 +63,7 @@ class Router
       res.status = 404
       res.write("Page Not Found")
     else
-      route.run
+      route.run(req, res)
     end
   end
 end

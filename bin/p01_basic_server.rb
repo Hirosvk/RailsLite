@@ -4,8 +4,7 @@ require 'rack'
     req = Rack::Request.new(env)
     res = Rack::Response.new
     p req.path
-    p req.request_method
-    p req.params
+    p req.cookies
     if req.path =~ /^\/i\/love\/appacademy/
       res.write("I love App Academy")
     else

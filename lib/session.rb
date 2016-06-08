@@ -5,7 +5,6 @@ class Session
   # deserialize the cookie into a hash
   def initialize(req)
     if req.cookies['_rails_lite_app']
-      # require 'byebug'; debugger
       @cookie = JSON.parse(req.cookies['_rails_lite_app'])
     else
       @cookie = {}
